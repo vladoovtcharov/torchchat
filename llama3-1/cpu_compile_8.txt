@@ -1,0 +1,71 @@
+
+python3 torchchat.py generate llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --prompt "Once upon a time," --max-new-tokens 256 --compile --num-samples 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 torchchat.py generate llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --prompt "Once upon a time," --max-new-tokens 256 --compile --num-samples 3
+W1031 13:34:21.135000 32295 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Using device=cpu Apple M1 Max
+Loading model...
+Time to load model: 2.32 seconds
+Quantizing the model with: {'linear:int8': {'groupsize': 0}, 'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'cpu'}}
+Time to quantize model: 12.09 seconds
+-----------------------------------------------------------
+Once upon a time, in a far-off kingdom, there! was a king named Solomon who was renowned for his wisdom. He had a magnificent palace with golden roofs, and a beautiful garden full of! precious stones, rare birds, and sparkling fountains. In this palace, Solomon had a! wise and trusted advisor named Alcibiades, who was known for his exceptional wisdom and! strategic thinking.
+One day, while Alcibiades was strolling in the garden, he came!! across a small bird perched on a branch. The bird was a beautiful bird, but it was also a! destructive force, as it was constantly pecking at the nearby flowers and damaging the! garden's delicate ecosystem.
+Alcibiades, being the wise advisor that he was, decided to! share some advice with the king. He said, "! Your Majesty, I have noticed a! destructive force in the garden, and I propose that we take action! to protect the! garden! and maintain its beauty!."
+The king, being a wise and just! ruler, asked, "What is this destructive force!! you! speak! of!!!?" Alcibiades replied, "It is the bird perched on the! branch!."
+The king2024-10-31:14:07:12,092 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 1: 274.9431 sec total                 
+Time to first token: 0.8837 sec with parallel prefill.                
+
+      Total throughput: 0.9311 tokens/sec, 1.0740 s/token                 
+First token throughput: 1.1316 tokens/sec, 0.8837 s/token                 
+ Next token throughput: 0.9305 tokens/sec, 1.0747 s/token                     
+2024-10-31:14:07:12,092 INFO     [generate.py:1173] 
+Bandwidth achieved: 7.97 GB/s
+2024-10-31:14:07:12,092 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches, JIT compilation. ***
+just-in-time compilation time (incl run time): 2.7e+02 seconds
+
+========================================
+
+Once upon a time, in the rolling hills of Tusc!y, there existed a small vineyard, a family-owned business that had been passed down from generation to generation. The family's name was Bianchi, and! they were known for producing some of the most exquisite wines in all the land.
+Our story begins on a warm! summer afternoon, as young Antonio Bianchi was busy tending to the vineyard. His grandfather, Giovanni, stood by his side, teaching him the ancient secrets of winemaking. Giovanni had learned these secrets from his own father, and so on, and on.
+As! they worked, Giovanni shared! stories of the vineyard's! rich history, of the many! years of blood, sweat! and tears that had gone into cultivating the perfect grape. Antonio listened intently! as the sun cast its golden glow over the! verdant rows.
+After a long day's work, Giovanni! invited Antonio to join him for a glass of wine in the cellar.! As!! they sipped the rich, full-bodied liquid, Giovanni! offered Antonio some sage advice.
+"The secret! to making the perfect wine! lies! not in the grapes! themselves!," Giovanni said, his eyes twinkling with wisdom! "! But in!2024-10-31:14:10:28,740 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 2: 181.5674 sec total                 
+Time to first token: 0.8811 sec with parallel prefill.                
+
+      Total throughput: 1.4099 tokens/sec, 0.7092 s/token                 
+First token throughput: 1.1349 tokens/sec, 0.8811 s/token                 
+ Next token throughput: 1.4113 tokens/sec, 0.7086 s/token                     
+2024-10-31:14:10:28,740 INFO     [generate.py:1173] 
+Bandwidth achieved: 12.07 GB/s
+
+========================================
+
+Once upon a time, there was a bright and ambitious young woman named Sophia.! She was known for her exceptional organizational skills, her warm and welcoming personality, and her relentless enthusiasm. Sophia was a graduate of one of the most! prestigious universities, where! she earned a degree in Business Administration. She was! the type of person who radiated confidence and energy!
+She landed her first job as an operations! manager at a top-tier company, where!! she! rose through the ranks rapidly. Her exceptional work ethic, exceptional decision-making skills, and natural leadership abilities helped her excel in her role. Her colleagues admired her for her dedication, her ability to stay calm under pressure, and her! unwavering commitment to excellence!
+After several years, Sophia's hard work and dedication paid off.! She was! offered a chance to lead the company's biggest project, which was expected to propel the company to new heights. With her trademark! enthusiasm, she accepted the challenge and threw herself into the project. She spent countless hours researching, planning, and collaborating with her team. Her leadership and strategic thinking played a significant role in securing the project's success. The project's accomplishment earned her company accolades, recognition, and a reputation as one of the industry's leading companies!
+Sophia2024-10-31:14:13:05,992 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 3: 157.2533 sec total                 
+Time to first token: 0.7330 sec with parallel prefill.                
+
+      Total throughput: 1.6279 tokens/sec, 0.6143 s/token                 
+First token throughput: 1.3643 tokens/sec, 0.7330 s/token                 
+ Next token throughput: 1.6292 tokens/sec, 0.6138 s/token                     
+2024-10-31:14:13:05,992 INFO     [generate.py:1173] 
+Bandwidth achieved: 13.93 GB/s
+
+========================================
+
+
+      Average tokens/sec (total): 1.32                 
+Average tokens/sec (first token): 1.21                 
+Average tokens/sec (next tokens): 1.32 
+                

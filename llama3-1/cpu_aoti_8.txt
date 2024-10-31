@@ -1,0 +1,89 @@
+python3 torchchat.py export llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --output-dso-path /tmp/model8.so
+python3 torchchat.py generate llama3.1 --dso-path /tmp/model8.so --prompt "Once upon a time," --max-new-tokens 256 --device cpu --num-samples 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 torchchat.py export llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --output-dso-path /tmp/model8.so
+W1031 14:29:29.220000 36322 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1031 14:29:43.221000 36322 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:225] +============================+
+W1031 14:29:43.222000 36322 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:226] |     !!!   WARNING   !!!    |
+W1031 14:29:43.222000 36322 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:227] +============================+
+W1031 14:29:43.222000 36322 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:228] torch._export.aot_compile() is being deprecated, please switch to directly calling torch._inductor.aoti_compile_and_package(torch.export.export()) instead.
+clang++: warning: -lc10: 'linker' input unused [-Wunused-command-line-argument]
+clang++: warning: -lomp: 'linker' input unused [-Wunused-command-line-argument]
+clang++: warning: argument unused during compilation: '-L/Library/Frameworks/Python.framework/Versions/3.12/lib' [-Wunused-command-line-argument]
+clang++: warning: argument unused during compilation: '-L/Users/jackkhuu/Desktop/oss/torchchat/.venv/lib/python3.12/site-packages/torch/lib' [-Wunused-command-line-argument]
+clang++: warning: argument unused during compilation: '-L/Users/jackkhuu/Desktop/oss/torchchat/.venv/lib/python3.12/site-packages/torch/lib' [-Wunused-command-line-argument]
+clang++: warning: argument unused during compilation: '-L/Users/jackkhuu/Desktop/oss/torchchat/.venv/lib/python3.12/site-packages/torch/lib' [-Wunused-command-line-argument]
+Using device=cpu
+Setting max_seq_length to 300 for DSO export.
+Loading model...
+Time to load model: 3.41 seconds
+Quantizing the model with: {'linear:int8': {'groupsize': 0}, 'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'cpu'}}
+Time to quantize model: 10.37 seconds
+-----------------------------------------------------------
+Exporting model using AOT Inductor to /tmp/model8.so
+The generated DSO model can be found at: /tmp/model8.so
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 torchchat.py generate llama3.1 --dso-path /tmp/model8.so --prompt "Once upon a time," --max-new-tokens 256 --device cpu --num-samples 3
+W1031 14:30:33.666000 36502 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Warning: checkpoint path ignored because an exported DSO or PTE path was specified
+Warning: checkpoint path ignored because an exported DSO or PTE path was specified
+Using device=cpu Apple M1 Max
+Loading model...
+Time to load model: 2.83 seconds
+-----------------------------------------------------------
+Once upon a time, there was a small village nestled in a green valley. The village was surrounded by rolling hills and a sparkling river that ran through the center of the village. The villagers were a hardworking and friendly people who"): lived simple lives, farming the land and trading with neighboring villages.
+One day, a wise old man named K حضرت arrived in the village. K حضرت was a wise old man who had traveled far and wide, studying the secrets of the universe and learning the art of magic. He was known for his kindness and wisdom, and the villagers were eager to meet him.
+As K حضرت wandered through the village, he noticed that the villagers were struggling to find enough food to eat. The crops were failing, and the river was drying up. K حضرت knew that the villagers needed his help, so he decided to use his magic to save the village.
+K حضرت gathered the villagers together and told them that he would perform a magic ritual to bring forth the rain and restore the crops. He took a small vial of water from the village stream and began to chant and dance around the village.
+The villagers watched in amazement as K حضرت's magic began to work. The air grew dark and stormy, and the sound of thunder rumbled in the distance. Suddenly2024-10-31:14:34:00,749 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 1: 141.7566 sec total                 
+Time to first token: 3.6079 sec with sequential prefill.                
+
+      Total throughput: 1.8059 tokens/sec, 0.5537 s/token                 
+First token throughput: 0.2772 tokens/sec, 3.6079 s/token                 
+ Next token throughput: 1.8458 tokens/sec, 0.5418 s/token                     
+2024-10-31:14:34:00,749 INFO     [generate.py:1173] 
+Bandwidth achieved: 29.00 GB/s
+2024-10-31:14:34:00,749 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
+
+========================================
+
+Once upon a time, when electric cars were just emerging, a group of entrepreneurs saw an opportunity and formed a company called Tesla. They set out to revolutionize the automotive industry by harnessing the power of electric motors and advanced technology. With a vision to accelerate the world's transition to sustainable energy, they started building cars that were not only environmentally friendly but also incredibly fast and stylish. Over the years, Tesla has continued to innovate and push the boundaries of what's possible with electric vehicles. Today, Tesla is a global leader in the electric car market, with a loyal following and a reputation for disrupting traditional industries. The story of Tesla is a testament to the power of innovation and the impact that a single company can have on the world.
+In this essay, the story of Tesla is told as a fable, highlighting the company's founding, mission, and innovation. The narrative is structured as a classic fairy tale, with a clear beginning, middle, and end. The text is written in a clear and concise style, making it easy to follow and understand. The author uses descriptive language to paint a vivid picture of Tesla's journey, from its humble beginnings to its current status as a global leader in the electric car market Mosses. The tone is enthusiastic and celebratory, conveying the author's2024-10-31:14:36:55,578 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 2: 174.8291 sec total                 
+Time to first token: 3.2557 sec with sequential prefill.                
+
+      Total throughput: 1.4643 tokens/sec, 0.6829 s/token                 
+First token throughput: 0.3071 tokens/sec, 3.2557 s/token                 
+ Next token throughput: 1.4862 tokens/sec, 0.6728 s/token                     
+2024-10-31:14:36:55,578 INFO     [generate.py:1173] 
+Bandwidth achieved: 23.52 GB/s
+
+========================================
+
+Once upon a time, in a land far, far away, there was a beloved community with a vibrant culture, rich traditions, and strong social bonds. The community was known for its warmth, generosity, and inclusiveness, where everyone felt welcome and valued. However, as time went on, the community faced challenges and changes that tested its strength and resilience. External forces, such as economic shifts, technological advancements, and demographic changes, began to erode the community's social fabric and sense of belonging.
+As the community struggled to adapt, divisions and inequalities emerged, and some members felt left behind or marginalized. The once-strong social bonds began to fray, and the community's sense of identity and purpose became uncertain. It seemed as though the community was losing its way, and its residents were no longer sure what it meant to be a part of this beloved community.
+But, as with any great story, there is often a hero Power that emerges to guide the community through its greatest challenges. In this tale, the hero Power was named "Resilience." Resilience was an old, wise, and gentle force that had always been present in the community, but it had been dormant, waiting for the right moment to awaken.
+As the community faced its greatest challenges, Resilience began to2024-10-31:14:39:34,000 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 3: 158.4224 sec total                 
+Time to first token: 4.6516 sec with sequential prefill.                
+
+      Total throughput: 1.6159 tokens/sec, 0.6188 s/token                 
+First token throughput: 0.2150 tokens/sec, 4.6516 s/token                 
+ Next token throughput: 1.6583 tokens/sec, 0.6030 s/token                     
+2024-10-31:14:39:34,001 INFO     [generate.py:1173] 
+Bandwidth achieved: 25.95 GB/s
+
+========================================
+
+
+      Average tokens/sec (total): 1.63                 
+Average tokens/sec (first token): 0.27                 
+Average tokens/sec (next tokens): 1.66 
+                

@@ -1,0 +1,70 @@
+
+python3 torchchat.py generate llama3.1 --quantize '{"precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --prompt "Once upon a time," --max-new-tokens 256 --num-samples 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 torchchat.py generate llama3.1 --quantize '{"precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --prompt "Once upon a time," --max-new-tokens 256 --num-samples 3
+W1031 12:51:51.718000 28326 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Using device=cpu Apple M1 Max
+Loading model...
+Time to load model: 2.45 seconds
+Quantizing the model with: {'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'cpu'}}
+Time to quantize model: 0.00 seconds
+-----------------------------------------------------------
+Once upon a time, in a galaxy far, far away... or.redirected from a reality or another, there was a young man named Alex, who considered himself a scientist and inventor. He grew up surrounded by books, machines, and components from his father's workshop. His father was an engineer, whose work involved developing prototypes for various cutting-edge projects. As a child, Alex spent countless hours observing and learning from his father, fascinated by the way he could transform ideas into reality.
+
+One day, while rummaging through his father's old toolbox, Alex stumbled upon an unusual device. It was a small, cylindrical object with a series of intricate buttons and a glowing blue LED light on top. His father, seeing Alex's curiosity, explained that it was an experimental device known as an "echo chamber." Its purpose was to manipulate and amplify sound waves in a peculiar way.
+
+Intrigued, Alex asked his father to demonstrate how it worked. His father explained that the device could be used to create a localized echo effect, making it seem as though the user was surrounded by multiple versions of themselves. The device could also be used to distort and manipulate the sound waves in various ways, potentially creating new sounds or effects.
+
+Alex was amazed by the possibilities of such a device and couldn't2024-10-31:12:52:56,166 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 1: 61.8255 sec total                 
+Time to first token: 0.5514 sec with parallel prefill.                
+
+      Total throughput: 4.1407 tokens/sec, 0.2415 s/token                 
+First token throughput: 1.8137 tokens/sec, 0.5514 s/token                 
+ Next token throughput: 4.1616 tokens/sec, 0.2403 s/token                     
+2024-10-31:12:52:56,166 INFO     [generate.py:1173] 
+Bandwidth achieved: 66.50 GB/s
+2024-10-31:12:52:56,166 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
+
+========================================
+
+Once upon a time, in a small, hilly town, a great drought had been taking place. A young girl, a sort of Cinderella, named Spacer, lived with her wicked stepmother, the baker's wife, and her two spoiled stepsisters, Bubble and Stew. Spacer was so poor that she had to live in the one room above the bakery where her stepmother and stepsisters used to live. The room was so small that Spacer could only fit in one corner, sleeping on a pile of straw, while her stepsisters and stepmother occupied the rest of the room. They had Spacer do all their work, running back and forth between the bakery and her small room, fetching and carrying, never letting her rest. Her stepmother made her do all the household chores, like kneading dough and grinding flour. On top of that, she was never allowed to leave the house, because she was considered a servant.
+But one day, the king issued a decree that whoever brought him a bucket of water from the underground well would be granted the right to sit beside him on the throne for the night. The king had received a sign that the drought would soon end, and he was eager to be the first to know the truth. The three stepsisters, Bubble and St2024-10-31:12:53:58,855 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 2: 62.6885 sec total                 
+Time to first token: 0.5806 sec with parallel prefill.                
+
+      Total throughput: 4.0837 tokens/sec, 0.2449 s/token                 
+First token throughput: 1.7223 tokens/sec, 0.5806 s/token                 
+ Next token throughput: 4.1058 tokens/sec, 0.2436 s/token                     
+2024-10-31:12:53:58,856 INFO     [generate.py:1173] 
+Bandwidth achieved: 65.59 GB/s
+
+========================================
+
+Once upon a time, in a small village, there lived a young boy named Liam. Liam was a curious and adventurous boy who loved to explore the world around him. One day, while wandering through the forest near his village, he stumbled upon an old, mysterious-looking door hidden behind a thick veil of foliage.
+The door was old and weathered, with intricate carvings of leaves and vines etched into its surface. Liam was drawn to it, feeling an inexplicable sense of curiosity and wonder. He pushed the door open, and a warm, golden light spilled out, illuminating the surrounding trees.
+As he stepped through the doorway, Liam found himself in a beautiful, lush garden filled with exotic flowers, towering trees, and sparkling fountains. A soft, melodious voice greeted him accompagnement à la voix de Liam's name, and he turned to see a majestic, winged creature perched on a nearby branch.
+The creature, a magnificent dragonfly with iridescent wings, spoke to Liam in a language he couldn't quite understand, but the words were somehow translated into his mind. The dragonfly told Liam that he had been brought to this enchanted realm for a special purpose, one that only he could fulfill.
+Liam, feeling both thrilled and a little intimidated2024-10-31:12:55:02,320 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 3: 63.4634 sec total                 
+Time to first token: 0.5948 sec with parallel prefill.                
+
+      Total throughput: 4.0338 tokens/sec, 0.2479 s/token                 
+First token throughput: 1.6813 tokens/sec, 0.5948 s/token                 
+ Next token throughput: 4.0561 tokens/sec, 0.2465 s/token                     
+2024-10-31:12:55:02,320 INFO     [generate.py:1173] 
+Bandwidth achieved: 64.79 GB/s
+
+========================================
+
+
+      Average tokens/sec (total): 4.09                 
+Average tokens/sec (first token): 1.74                 
+Average tokens/sec (next tokens): 4.11 
+                

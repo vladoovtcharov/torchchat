@@ -1,0 +1,69 @@
+
+python3 torchchat.py generate llama3.1 --quantize '{"precision": {"dtype":"float16"}, "executor":{"accelerator":"mps"}}' --prompt "Once upon a time," --max-new-tokens 256 --num-samples 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 torchchat.py generate llama3.1 --quantize '{"precision": {"dtype":"float16"}, "executor":{"accelerator":"mps"}}' --prompt "Once upon a time," --max-new-tokens 256 --num-samples 3
+W1031 12:12:03.383000 27548 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Using device=mps 
+Loading model...
+Time to load model: 29.91 seconds
+Quantizing the model with: {'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'mps'}}
+Time to quantize model: 0.00 seconds
+-----------------------------------------------------------
+Once upon a time, there was a beautiful young woman named Sarah. She lived in a small village surrounded by rolling hills and green forests. Sarah was known throughout the village for her exceptional cooking skills, and her family-owned bakery was a favorite among the locals.
+One day, a handsome young man named John arrived in the village. He was a traveling merchant, and his caravan had stopped in the village for the night. As he walked through the village, he caught a whiff of something amazing and followed the scent to Sarah's bakery.
+Inside the bakery, Sarah was busy preparing a batch of freshly baked bread. The aroma wafting from the oven was intoxicating, and John was immediately drawn to the bakery. He introduced himself to Sarah, and they struck up a conversation.
+As they talked, Sarah noticed that John was fascinated by the intricacies of bread making. He asked her questions about the different types of flour, the importance of kneading, and the art of creating the perfect crust. Sarah was impressed by John's enthusiasm and shared her knowledge with him.
+As the evening wore on, John asked Sarah if he could help with the baking. She agreed, and together they worked side by side, measuring out ingredients, kneading dough, and sliding trays of bread into the oven.2024-10-31:12:12:51,457 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 1: 17.6033 sec total                 
+Time to first token: 0.3002 sec with parallel prefill.                
+
+      Total throughput: 14.5428 tokens/sec, 0.0688 s/token                 
+First token throughput: 3.3309 tokens/sec, 0.3002 s/token                 
+ Next token throughput: 14.7373 tokens/sec, 0.0679 s/token                     
+2024-10-31:12:12:51,457 INFO     [generate.py:1173] 
+Bandwidth achieved: 233.56 GB/s
+2024-10-31:12:12:51,457 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
+
+========================================
+
+Once upon a time, in a world not so different from our own, there lived a young man named Alex. Alex was a curious and adventurous soul, always eager to explore the world around him. He was a skilled artist and musician, and loved nothing more than to spend his days drawing and playing his guitar.
+One day, while wandering through the forest, Alex stumbled upon a mysterious and ancient-looking door hidden behind a thick veil of foliage. The door was unlike anything he had ever seen before - it was made of a strange, glowing wood, and was adorned with intricate carvings that seemed to pulse with a life of their own.
+Despite feeling a sense of trepidation, Alex couldn't resist the urge to open the door and see what lay beyond. As he pushed it open, a warm, golden light spilled out, and Alex felt himself being drawn into its radiance.
+On the other side of the door, Alex found himself in a beautiful, dreamlike landscape. The air was filled with sweet, musical notes, and the ground was covered in a soft, velvety moss that felt like silk beneath his feet. A gentle breeze carried the scent of flowers, and Alex felt his heart fill with joy and wonder.
+As he wandered through this enchanted land, Alex came across2024-10-31:12:13:08,710 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 2: 17.2528 sec total                 
+Time to first token: 0.1039 sec with parallel prefill.                
+
+      Total throughput: 14.8382 tokens/sec, 0.0674 s/token                 
+First token throughput: 9.6219 tokens/sec, 0.1039 s/token                 
+ Next token throughput: 14.8698 tokens/sec, 0.0673 s/token                     
+2024-10-31:12:13:08,710 INFO     [generate.py:1173] 
+Bandwidth achieved: 238.31 GB/s
+
+========================================
+
+Once upon a time, in a far-off galaxy, there existed a group of beings known as the "Luminari." They were an ancient, wise, and powerful race that possessed the ability to harness and wield light in its purest form. The Luminari were revered throughout the galaxy for their skill in healing, their profound understanding of the universe, and their unwavering dedication to preserving the balance of the cosmos. They dwelled within a sacred realm known as "Elyria," a planet of breathtaking beauty and harmony, where the skies shimmered with a kaleidoscope of colors, and the air resonated with an otherworldly music.
+In Elyria, the Luminari crafted magnificent crystal structures that hummed with an inner light, amplifying the planet's natural energies and sustaining the delicate balance of the ecosystem. These crystals, known as "Aurora Keys," were imbued with the essence of Elyria itself and served as guardians of the planet's secrets and knowledge. The Luminari spent their days studying the ancient lore of their world, experimenting with new forms of light manipulation, and mastering the intricacies of the Aurora Keys.
+However, as the ages passed, a dark and malevolent force began to spread its influence across the galaxy. This2024-10-31:12:13:25,974 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 3: 17.2634 sec total                 
+Time to first token: 0.1037 sec with parallel prefill.                
+
+      Total throughput: 14.8291 tokens/sec, 0.0674 s/token                 
+First token throughput: 9.6414 tokens/sec, 0.1037 s/token                 
+ Next token throughput: 14.8604 tokens/sec, 0.0673 s/token                     
+2024-10-31:12:13:25,974 INFO     [generate.py:1173] 
+Bandwidth achieved: 238.16 GB/s
+
+========================================
+
+
+      Average tokens/sec (total): 14.74                 
+Average tokens/sec (first token): 7.53                 
+Average tokens/sec (next tokens): 14.82 
+                

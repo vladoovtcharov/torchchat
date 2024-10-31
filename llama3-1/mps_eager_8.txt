@@ -1,0 +1,67 @@
+
+python3 torchchat.py generate llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"mps"}}' --prompt "Once upon a time," --max-new-tokens 256 --num-samples 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python3 torchchat.py generate llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"mps"}}' --prompt "Once upon a time," --max-new-tokens 256 --num-samples 3
+W1031 12:13:31.800000 27818 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Using device=mps 
+Loading model...
+Time to load model: 3.51 seconds
+Quantizing the model with: {'linear:int8': {'groupsize': 0}, 'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'mps'}}
+Time to quantize model: 1.23 seconds
+-----------------------------------------------------------
+Once upon a time, I had the most wonderful opportunity to stay in a beautiful farmhouse in Tuscany for a few days. I was in heaven! The rolling hills, the beautiful cypress trees, the delicious food, the charming villages... it was all just a dream come true. And the farmhouse itself? It was just perfect. The owners had decorated it with such love and care, it felt like a warm hug as soon as I walked in the door. The kitchen was filled with the most delicious smells, and the fireplace was ready to be lit for the evening. I felt like I was stepping back in time, living in a real-life Italian fairy tale. And the people? Oh my goodness... the owners were so kind and welcoming, and the neighbors were like family. We would cook together, share stories, and laugh into the night. It was truly a magical experience, and one that I will always treasure. The farmhouse was in a tiny village called San Gimignano, which is known for its medieval architecture and stunning views. I spent my days exploring the village, visiting the local markets, and taking long walks through the rolling hills. And at night, I would sit by the fire, watching the stars twinkling above, and feeling grateful for this incredible experience. It2024-10-31:12:13:49,489 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 1: 12.3303 sec total                 
+Time to first token: 0.2624 sec with parallel prefill.                
+
+      Total throughput: 20.7618 tokens/sec, 0.0482 s/token                 
+First token throughput: 3.8108 tokens/sec, 0.2624 s/token                 
+ Next token throughput: 21.1304 tokens/sec, 0.0473 s/token                     
+2024-10-31:12:13:49,489 INFO     [generate.py:1173] 
+Bandwidth achieved: 177.70 GB/s
+2024-10-31:12:13:49,489 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
+
+========================================
+
+Once upon a time, a young boy named Shinji lost his parents in a tragic accident. He was left to live with his father, Gendo, a renowned scientist who was obsessed with creating a being known as the Evangelion. Shinji's life was a constant struggle to find acceptance and love. His father was distant, and his classmates bullied him mercilessly. Feeling unworthy and unloved, Shinji turned to his father's creations, the Evangelions, for comfort. He piloted the giant humanoid robots, using them as a means to cope with his emotional pain. However, as Shinji delved deeper into the world of the Evangelions, he discovered dark secrets about his father's true intentions and the mysteries surrounding the being known as the Angel. Shinji's journey was a battle to confront his inner demons and find hope in a world filled with despair.
+
+This is the beginning of the story of Shinji, the main protagonist of the anime series "Neon Genesis Evangelion". Shinji's story is a reflection of the author's thoughts on the human condition, particularly on the themes of isolation, the struggle for acceptance, and the importance of human connection.
+
+In writing this story, the author likely wanted to explore the complexities of human emotions, particularly the feelings of inade2024-10-31:12:42:56,698 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 2: 13.9416 sec total                 
+Time to first token: 0.0953 sec with parallel prefill.                
+
+      Total throughput: 18.3624 tokens/sec, 0.0545 s/token                 
+First token throughput: 10.4973 tokens/sec, 0.0953 s/token                 
+ Next token throughput: 18.4165 tokens/sec, 0.0543 s/token                     
+2024-10-31:12:42:56,698 INFO     [generate.py:1173] 
+Bandwidth achieved: 157.16 GB/s
+
+========================================
+
+Once upon a time, in the small town of Willow Creek, there lived a young man named Jack. Jack was a skilled craftsman with a passion for woodwork. He spent most of his days in his cozy workshop, creating beautiful pieces of furniture that were both functional and aesthetically pleasing.
+One day, Jack received a special commission from the town's mayor, who wanted a custom-made wooden bench for the town square. The mayor had a specific design in mind, which included intricate carvings of local flora and fauna.
+Jack was excited to take on the project, but he soon realized that the design was more complex than he had initially thought. The carvings required great precision and detail, and Jack was hesitant to take on the task.
+Just as Jack was about to turn down the commission, his wise old mentor, George, visited him at the workshop. George was a retired craftsman who had spent his life creating beautiful wooden pieces, and he was known for his expertise and patience.
+George noticed Jack's reluctance and asked him to explain. When Jack showed George the design, the older man nodded thoughtfully and said, "Ah, yes. That is a challenging design, but it's also an opportunity for growth and innovation. You see, Jack, as craftsman,2024-10-31:12:50:50,738 INFO     [generate.py:1162] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+Generated 255 tokens                 
+Time for inference 3: 12.9041 sec total                 
+Time to first token: 0.0936 sec with parallel prefill.                
+
+      Total throughput: 19.8386 tokens/sec, 0.0504 s/token                 
+First token throughput: 10.6865 tokens/sec, 0.0936 s/token                 
+ Next token throughput: 19.9054 tokens/sec, 0.0502 s/token                     
+2024-10-31:12:50:50,738 INFO     [generate.py:1173] 
+Bandwidth achieved: 169.80 GB/s
+
+========================================
+
+
+      Average tokens/sec (total): 19.65                 
+Average tokens/sec (first token): 8.33                 
+Average tokens/sec (next tokens): 19.82 
+                

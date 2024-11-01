@@ -2,73 +2,69 @@
 python3 torchchat.py generate llama3.1 --quantize '{"precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --prompt "Once upon a time," --max-new-tokens 256 --compile --num-samples 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 python3 torchchat.py generate llama3.1 --quantize '{"precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --prompt "Once upon a time," --max-new-tokens 256 --compile --num-samples 3
-W1031 13:03:30.197000 30883 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1031 17:18:42.414000 63819 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
 Using device=cpu Apple M1 Max
 Loading model...
-Time to load model: 2.38 seconds
+Time to load model: 2.11 seconds
 Quantizing the model with: {'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'cpu'}}
 Time to quantize model: 0.00 seconds
 -----------------------------------------------------------
-Once upon a time, in a small village nestled in the rolling hills of Tuscany, there lived a young girl named Sophia. Sophia was a curious and adventurous child, with a heart full of wonder and a mind full of questions. She loved to explore the countryside, chasing after butterflies and watching the sunflowers grow tall in the fields.
-One day, while wandering through the village, Sophia stumbled upon a small, mysterious shop tucked away on a quiet street. The shop was called "La Bottega delle Merveille," which means "The Shop of Marvels." Sophia had never seen the shop before, but something about it drew her in. She pushed open the door and stepped inside.
-The shop was dimly lit, with shelves upon shelves of strange and wondrous objects. There were vintage clockwork machines, antique scientific instruments, and mysterious artifacts from far-off lands. Sophia's eyes widened as she wandered through the aisles, taking in the sights and sounds of the shop.
-At the back of the shop, behind a counter covered in dust and cobwebs, stood an old man with a kind face and a twinkle in his eye. He introduced himself as Signor Bello, the proprietor of La Bottega delle Merveille. Signor Bello welcomed Sophia with a2024-10-31:13:04:53,814 INFO     [generate.py:1162] 
+Once upon a time, in the lovely town of Stirling, Scotland, there lived a young girl named Sophie. Sophie was a bright and curious child, always eager to learn and explore the world around her.
+One day, while wandering through the town's historic streets, Sophie stumbled upon a small, mysterious shop tucked away in a quiet alley. The sign above the door read "Dr. MacTavish's Curious Commissions." Sophie's curiosity was piqued, and she pushed open the door to venture inside.
+Dr. MacTavish, a bespectacled and eccentric old man with a wild shock of white hair, looked up from behind his cluttered desk and greeted Sophie with a warm smile. "Ah, welcome, young lady! I've been expecting you. You seem like someone with a taste for adventure and a penchant for the unusual."
+Sophie's eyes widened as she scanned the shop's shelves, which were stacked high with all manner of curious objects: vintage clockwork mechanisms, rare books bound in leather, and glittering crystals nestled among wooden carvings. "What is this place?" Sophie asked, her voice barely above a whisper.
+
+Dr. MacTavish chuckled. "This, my dear, is a place where the ordinary and the2024-10-31:17:19:34,974 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 1: 81.0548 sec total                 
-Time to first token: 0.5664 sec with parallel prefill.                
+Time for inference 1: 50.2530 sec total                 
+Time to first token: 0.3401 sec with parallel prefill.                
 
-      Total throughput: 3.1584 tokens/sec, 0.3166 s/token                 
-First token throughput: 1.7655 tokens/sec, 0.5664 s/token                 
- Next token throughput: 3.1682 tokens/sec, 0.3156 s/token                     
-2024-10-31:13:04:53,814 INFO     [generate.py:1173] 
-Bandwidth achieved: 50.72 GB/s
-2024-10-31:13:04:53,814 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches, JIT compilation. ***
-just-in-time compilation time (incl run time): 8.1e+01 seconds
+      Total throughput: 5.0942 tokens/sec, 0.1963 s/token                 
+First token throughput: 2.9401 tokens/sec, 0.3401 s/token                 
+ Next token throughput: 5.1089 tokens/sec, 0.1957 s/token                     
+2024-10-31:17:19:34,974 INFO     [generate.py:1173] 
+Bandwidth achieved: 81.82 GB/s
+2024-10-31:17:19:34,974 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches, JIT compilation. ***
+just-in-time compilation time (incl run time): 5e+01 seconds
 
 ========================================
 
-Once upon a time, there was a beautiful queen who lived in a kingdom surrounded by rolling hills and sparkling lakes. She was a just and fair ruler, loved by her people, but she had one problem: her kingdom was plagued by a terrible drought.
-The crops withered and died, the rivers ran dry, and the people suffered. The queen called upon her wisest advisors to find a solution to the problem. They searched far and wide, consulted the ancient tomes, and sought the advice of the most learned scholars, but no one could offer a lasting solution.
-One day, a young woman with long, curly hair and a kind smile walked into the throne room. She introduced herself as a traveling healer, who had been traveling the land in search of a cure for the drought.
-The queen was skeptical at first, but there was something about the young woman that put her at ease. She asked the healer what she believed was the cause of the drought and what she thought could be done to solve it.
-The young woman thought for a moment, then began to speak. "Your Majesty, I believe the drought is not just a natural phenomenon, but a reflection of the imbalance within your kingdom. Your people have forgotten the ancient ways of living in harmony with nature. They have forgotten to2024-10-31:13:17:42,477 INFO     [generate.py:1162] 
+Once upon a time, there was a city that was plagued by an endless supply of cats. They were everywhere, scurrying about on the sidewalks, lounging in the sunbeams that streamed through the windows, and even sleeping in the park. The city was called Cat-Haven, and it was a place where no animal was more welcome than a feline.
+The people of Cat-Haven loved their cats dearly. They fed them, petted them, and even built cat cafes and cat museums to honor their feline friends. But as the years passed, the cats began to multiply at an alarming rate. They were everywhere, and no one knew how to stop it.
+One day, a young girl named Lily noticed that the cats seemed to be getting more and more aggressive. They would hiss and spit at people, and even attack occasional visitors to the city. Lily was worried, and she decided to investigate the source of the problem.
+She spent hours scouring the city, talking to cat owners and watching the behavior of the cats. And then, she stumbled upon a mysterious figure - an old woman who lived on the outskirts of the city, surrounded by a sprawling cat sanctuary.
+The old woman, whose name was Winnie, was a renowned cat breeder, but Lily soon2024-10-31:17:20:11,927 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 2: 46.6757 sec total                 
-Time to first token: 0.5390 sec with parallel prefill.                
+Time for inference 2: 36.9538 sec total                 
+Time to first token: 0.3023 sec with parallel prefill.                
 
-      Total throughput: 5.4846 tokens/sec, 0.1823 s/token                 
-First token throughput: 1.8551 tokens/sec, 0.5390 s/token                 
- Next token throughput: 5.5271 tokens/sec, 0.1809 s/token                     
-2024-10-31:13:17:42,477 INFO     [generate.py:1173] 
-Bandwidth achieved: 88.09 GB/s
+      Total throughput: 6.9276 tokens/sec, 0.1444 s/token                 
+First token throughput: 3.3075 tokens/sec, 0.3023 s/token                 
+ Next token throughput: 6.9574 tokens/sec, 0.1437 s/token                     
+2024-10-31:17:20:11,927 INFO     [generate.py:1173] 
+Bandwidth achieved: 111.26 GB/s
 
 ========================================
 
-Once upon a time, there lived a farmer named John. The farmer was never very rich, but he always provided for his family. However, he was not content to simply live off of his farm. He dreamed of building a large, beautiful house and living a comfortable life.
-The farmer spent many years working hard on his farm, but he never seemed to get ahead. He would plant his crops, tend to his livestock, and harvest his crops, but he never seemed to accumulate any wealth.
-One day, a wise old man came to the farmer and said, "John, why do you work so hard? Do you know that you can make a living off of very little land with the right knowledge?"
-The farmer was puzzled. "How can this be?" he asked.
-The wise old man smiled and said, "I will show you. Follow me."
-The wise old man took the farmer to a small plot of land that was no bigger than a few acres. The land was very fertile, and the wise old man began to explain how to cultivate it.
-The wise old man taught the farmer how to use high-yielding crop varieties, fertilize the soil, and conserve water. He also showed the farmer how to raise animals efficiently and sell them for a profit.
-The farmer was2024-10-31:13:34:14,003 INFO     [generate.py:1162] 
+Once upon a time, the United States was a relatively simple country, not yet globalized. Trade and commerce were mainly local, and America's economy was heavily based on agriculture, manufacturing, and mining. However, as the nation expanded and the world became smaller due to the advent of international communication and transportation technologies, the United States also underwent globalization. The late 20th century saw the emergence of the United States as a global leader in a globalized economy, and a significant portion of this expansion was fueled by technological advancements. The rise of the internet and related digital technologies has played a crucial role in this expansion, and the two have had a symbiotic relationship—driving globalization and being driven by it.
+When the United States first began to globalize, trade agreements and policies, international institutions like the G20 and the World Trade Organization (WTO), and multinational corporations were established to promote the exchange of goods and services across international borders. The emergence of global supply chains led to a division of labor among nations, where different countries specialized in producing specific products in order to lower costs and increase efficiency. This increased interdependence among economies also led to the establishment of regional trade agreements, such as the North American Free Trade Agreement (NAFTA) and the European Union's (EU) single market2024-10-31:17:20:51,041 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 3: 45.7470 sec total                 
-Time to first token: 0.5107 sec with parallel prefill.                
+Time for inference 3: 39.1144 sec total                 
+Time to first token: 0.3229 sec with parallel prefill.                
 
-      Total throughput: 5.5960 tokens/sec, 0.1787 s/token                 
-First token throughput: 1.9580 tokens/sec, 0.5107 s/token                 
- Next token throughput: 5.6371 tokens/sec, 0.1774 s/token                     
-2024-10-31:13:34:14,003 INFO     [generate.py:1173] 
-Bandwidth achieved: 89.87 GB/s
+      Total throughput: 6.5449 tokens/sec, 0.1528 s/token                 
+First token throughput: 3.0974 tokens/sec, 0.3229 s/token                 
+ Next token throughput: 6.5736 tokens/sec, 0.1521 s/token                     
+2024-10-31:17:20:51,042 INFO     [generate.py:1173] 
+Bandwidth achieved: 105.11 GB/s
 
 ========================================
 
 
-      Average tokens/sec (total): 4.75                 
-Average tokens/sec (first token): 1.86                 
-Average tokens/sec (next tokens): 4.78 
+      Average tokens/sec (total): 6.19                 
+Average tokens/sec (first token): 3.11                 
+Average tokens/sec (next tokens): 6.21 
                 

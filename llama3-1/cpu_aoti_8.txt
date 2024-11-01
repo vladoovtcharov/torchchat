@@ -2,11 +2,11 @@ python3 torchchat.py export llama3.1 --quantize '{"linear:int8": {"groupsize": 0
 python3 torchchat.py generate llama3.1 --dso-path /tmp/model8.so --prompt "Once upon a time," --max-new-tokens 256 --device cpu --num-samples 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 python3 torchchat.py export llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --output-dso-path /tmp/model8.so
-W1031 14:29:29.220000 36322 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
-W1031 14:29:43.221000 36322 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:225] +============================+
-W1031 14:29:43.222000 36322 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:226] |     !!!   WARNING   !!!    |
-W1031 14:29:43.222000 36322 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:227] +============================+
-W1031 14:29:43.222000 36322 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:228] torch._export.aot_compile() is being deprecated, please switch to directly calling torch._inductor.aoti_compile_and_package(torch.export.export()) instead.
+W1031 17:42:09.790000 68245 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1031 17:42:24.406000 68245 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:225] +============================+
+W1031 17:42:24.407000 68245 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:226] |     !!!   WARNING   !!!    |
+W1031 17:42:24.407000 68245 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:227] +============================+
+W1031 17:42:24.407000 68245 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:228] torch._export.aot_compile() is being deprecated, please switch to directly calling torch._inductor.aoti_compile_and_package(torch.export.export()) instead.
 clang++: warning: -lc10: 'linker' input unused [-Wunused-command-line-argument]
 clang++: warning: -lomp: 'linker' input unused [-Wunused-command-line-argument]
 clang++: warning: argument unused during compilation: '-L/Library/Frameworks/Python.framework/Versions/3.12/lib' [-Wunused-command-line-argument]
@@ -16,74 +16,83 @@ clang++: warning: argument unused during compilation: '-L/Users/jackkhuu/Desktop
 Using device=cpu
 Setting max_seq_length to 300 for DSO export.
 Loading model...
-Time to load model: 3.41 seconds
+Time to load model: 4.44 seconds
 Quantizing the model with: {'linear:int8': {'groupsize': 0}, 'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'cpu'}}
-Time to quantize model: 10.37 seconds
+Time to quantize model: 9.97 seconds
 -----------------------------------------------------------
 Exporting model using AOT Inductor to /tmp/model8.so
 The generated DSO model can be found at: /tmp/model8.so
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 python3 torchchat.py generate llama3.1 --dso-path /tmp/model8.so --prompt "Once upon a time," --max-new-tokens 256 --device cpu --num-samples 3
-W1031 14:30:33.666000 36502 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1031 17:43:15.039000 68379 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
 Warning: checkpoint path ignored because an exported DSO or PTE path was specified
 Warning: checkpoint path ignored because an exported DSO or PTE path was specified
 Using device=cpu Apple M1 Max
 Loading model...
-Time to load model: 2.83 seconds
+Time to load model: 3.54 seconds
 -----------------------------------------------------------
-Once upon a time, there was a small village nestled in a green valley. The village was surrounded by rolling hills and a sparkling river that ran through the center of the village. The villagers were a hardworking and friendly people who"): lived simple lives, farming the land and trading with neighboring villages.
-One day, a wise old man named K حضرت arrived in the village. K حضرت was a wise old man who had traveled far and wide, studying the secrets of the universe and learning the art of magic. He was known for his kindness and wisdom, and the villagers were eager to meet him.
-As K حضرت wandered through the village, he noticed that the villagers were struggling to find enough food to eat. The crops were failing, and the river was drying up. K حضرت knew that the villagers needed his help, so he decided to use his magic to save the village.
-K حضرت gathered the villagers together and told them that he would perform a magic ritual to bring forth the rain and restore the crops. He took a small vial of water from the village stream and began to chant and dance around the village.
-The villagers watched in amazement as K حضرت's magic began to work. The air grew dark and stormy, and the sound of thunder rumbled in the distance. Suddenly2024-10-31:14:34:00,749 INFO     [generate.py:1162] 
+Once upon a time, in a whimsical forest, there lived a little rabbit named Rosie. Rosie loved to hop around, explore, and play in the sun. But Rosie had a secret: she was afraid of the dark.
+As the sun began to set, Rosie would scurry back to her cozy burrow, trembling with fear. She'd snuggle into her bed of soft leaves and try to fall asleep, but her mind would wander to all the spooky creatures that might be lurking in the shadows.
+One evening, as Rosie was getting ready for bed, a wise old owl perched on a nearby branch called out to her. "Rosie, my little rabbit friend, why do you fear the dark?" asked the owl.
+Rosie explained how the darkness made her feel scared and alone. The owl listened carefully, then offered some wise words: "The darkness is not something to be feared, Rosie. It's actually a time for rest, a time for dreams, and a time for self-reflection. The stars and moon shine brightly in the night sky, illuminating the path ahead. And as for creatures, well, most are just like you, seeking shelter and security in the darkness."
+
+Rosie thought about the owl's words and realized that she had been letting her fears2024-10-31:17:46:51,030 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 1: 141.7566 sec total                 
-Time to first token: 3.6079 sec with sequential prefill.                
+Time for inference 1: 149.8221 sec total                 
+Time to first token: 3.6137 sec with sequential prefill.                
 
-      Total throughput: 1.8059 tokens/sec, 0.5537 s/token                 
-First token throughput: 0.2772 tokens/sec, 3.6079 s/token                 
- Next token throughput: 1.8458 tokens/sec, 0.5418 s/token                     
-2024-10-31:14:34:00,749 INFO     [generate.py:1173] 
-Bandwidth achieved: 29.00 GB/s
-2024-10-31:14:34:00,749 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
+      Total throughput: 1.7087 tokens/sec, 0.5852 s/token                 
+First token throughput: 0.2767 tokens/sec, 3.6137 s/token                 
+ Next token throughput: 1.7441 tokens/sec, 0.5734 s/token                     
+2024-10-31:17:46:51,030 INFO     [generate.py:1173] 
+Bandwidth achieved: 27.44 GB/s
+2024-10-31:17:46:51,031 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
 
 ========================================
 
-Once upon a time, when electric cars were just emerging, a group of entrepreneurs saw an opportunity and formed a company called Tesla. They set out to revolutionize the automotive industry by harnessing the power of electric motors and advanced technology. With a vision to accelerate the world's transition to sustainable energy, they started building cars that were not only environmentally friendly but also incredibly fast and stylish. Over the years, Tesla has continued to innovate and push the boundaries of what's possible with electric vehicles. Today, Tesla is a global leader in the electric car market, with a loyal following and a reputation for disrupting traditional industries. The story of Tesla is a testament to the power of innovation and the impact that a single company can have on the world.
-In this essay, the story of Tesla is told as a fable, highlighting the company's founding, mission, and innovation. The narrative is structured as a classic fairy tale, with a clear beginning, middle, and end. The text is written in a clear and concise style, making it easy to follow and understand. The author uses descriptive language to paint a vivid picture of Tesla's journey, from its humble beginnings to its current status as a global leader in the electric car market Mosses. The tone is enthusiastic and celebratory, conveying the author's2024-10-31:14:36:55,578 INFO     [generate.py:1162] 
+Once upon a time, there was a young man named John. John was a skilled artist who had been fascinated by magic and the supernatural for as long as he could remember.
+One day, while wandering through an old antique shop, John stumbled upon an ancient-looking book bound in worn leather. The cover was adorned with strange symbols and markings that seemed to shimmer in the dim light of the shop.
+As John picked up the book, he felt a sudden surge of energy run through his body, as if the book was awakening him to a secret world that lay just beyond the edge of reality.
+"Ah, my young friend," said a wispy voice behind him. "I see you've found the Book of Eldrid."
+John turned to see a frail, elderly man with a wild look in his eye.
+"Yes, I was just about to buy it," said John, his hand still grasping the book.
+The old man shook his head. "No, no, no," he said. "You can't just buy that book. You have to earn it. You have to prove yourself worthy."
+
+John's curiosity was piqued. "What do you mean?" he asked.
+
+The old man smiled. "I'll give you a test," he said. "If you can solve2024-10-31:17:49:17,585 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 2: 174.8291 sec total                 
-Time to first token: 3.2557 sec with sequential prefill.                
+Time for inference 2: 146.5542 sec total                 
+Time to first token: 3.2257 sec with sequential prefill.                
 
-      Total throughput: 1.4643 tokens/sec, 0.6829 s/token                 
-First token throughput: 0.3071 tokens/sec, 3.2557 s/token                 
- Next token throughput: 1.4862 tokens/sec, 0.6728 s/token                     
-2024-10-31:14:36:55,578 INFO     [generate.py:1173] 
-Bandwidth achieved: 23.52 GB/s
+      Total throughput: 1.7468 tokens/sec, 0.5725 s/token                 
+First token throughput: 0.3100 tokens/sec, 3.2257 s/token                 
+ Next token throughput: 1.7791 tokens/sec, 0.5621 s/token                     
+2024-10-31:17:49:17,585 INFO     [generate.py:1173] 
+Bandwidth achieved: 28.05 GB/s
 
 ========================================
 
-Once upon a time, in a land far, far away, there was a beloved community with a vibrant culture, rich traditions, and strong social bonds. The community was known for its warmth, generosity, and inclusiveness, where everyone felt welcome and valued. However, as time went on, the community faced challenges and changes that tested its strength and resilience. External forces, such as economic shifts, technological advancements, and demographic changes, began to erode the community's social fabric and sense of belonging.
-As the community struggled to adapt, divisions and inequalities emerged, and some members felt left behind or marginalized. The once-strong social bonds began to fray, and the community's sense of identity and purpose became uncertain. It seemed as though the community was losing its way, and its residents were no longer sure what it meant to be a part of this beloved community.
-But, as with any great story, there is often a hero Power that emerges to guide the community through its greatest challenges. In this tale, the hero Power was named "Resilience." Resilience was an old, wise, and gentle force that had always been present in the community, but it had been dormant, waiting for the right moment to awaken.
-As the community faced its greatest challenges, Resilience began to2024-10-31:14:39:34,000 INFO     [generate.py:1162] 
+Once upon a time, in the heart of Africa, there was a beautiful and magical forest called Mzinga. The Mzinga Forest was a place of enchantment where animals did not just roam wild; they lived in harmony with the natural world, and the spirits of the forest watched over them. In this mystical land, animals communicated with each other in a variety of languages, including the African languages, ancient tongues of the forest. The Mzinga Forest was home to animals of all kinds, from the smallest insect to the largest predator, and each one played a vital role in the delicate balance of the ecosystem.
+The forest was governed by a wise and just council of animals, known as the Circle of Life. The council was made up of representatives from each of the different animal groups, and they met regularly to discuss the well-being of the forest and its inhabitants. The council was advised by the wise and ancient badger, Akua, who had lived in the Mzinga Forest for many years and had gained a deep understanding of its workings.
+One day, the council received a warning from Akua that the balance of the forest was beginning to shift. The once-clear streams were becoming cloudy fiat, and the plants were beginning to wither and die. The animals of the forest2024-10-31:17:51:42,630 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 3: 158.4224 sec total                 
-Time to first token: 4.6516 sec with sequential prefill.                
+Time for inference 3: 145.0446 sec total                 
+Time to first token: 3.2088 sec with sequential prefill.                
 
-      Total throughput: 1.6159 tokens/sec, 0.6188 s/token                 
-First token throughput: 0.2150 tokens/sec, 4.6516 s/token                 
- Next token throughput: 1.6583 tokens/sec, 0.6030 s/token                     
-2024-10-31:14:39:34,001 INFO     [generate.py:1173] 
-Bandwidth achieved: 25.95 GB/s
+      Total throughput: 1.7650 tokens/sec, 0.5666 s/token                 
+First token throughput: 0.3116 tokens/sec, 3.2088 s/token                 
+ Next token throughput: 1.7979 tokens/sec, 0.5562 s/token                     
+2024-10-31:17:51:42,630 INFO     [generate.py:1173] 
+Bandwidth achieved: 28.35 GB/s
 
 ========================================
 
 
-      Average tokens/sec (total): 1.63                 
-Average tokens/sec (first token): 0.27                 
-Average tokens/sec (next tokens): 1.66 
+      Average tokens/sec (total): 1.74                 
+Average tokens/sec (first token): 0.30                 
+Average tokens/sec (next tokens): 1.77 
                 

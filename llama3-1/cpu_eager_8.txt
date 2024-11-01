@@ -2,70 +2,67 @@
 python3 torchchat.py generate llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --prompt "Once upon a time," --max-new-tokens 256 --num-samples 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 python3 torchchat.py generate llama3.1 --quantize '{"linear:int8": {"groupsize": 0}, "precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --prompt "Once upon a time," --max-new-tokens 256 --num-samples 3
-W1031 12:55:07.901000 28755 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1031 17:15:45.726000 63443 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
 Using device=cpu Apple M1 Max
 Loading model...
-Time to load model: 2.40 seconds
+Time to load model: 2.15 seconds
 Quantizing the model with: {'linear:int8': {'groupsize': 0}, 'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'cpu'}}
-Time to quantize model: 10.31 seconds
+Time to quantize model: 9.13 seconds
 -----------------------------------------------------------
-Once upon a time, in a small village nestled in the rolling hills of rural India, there lived a young kiwi named Kavita. Kavita was known wisely among the villagers for her uncanny ability to craft beautiful quilts from the intricately woven patterns of nature. Using threads from delicate spider webs, petals of flowers, and shimmering strands of river water, Kavita wove her quilts, each one telling a unique story from the cycles of life and death, growth and decay that flowed through the village like a river.
-
-One day, a severe drought struck the land, and the crops began to wither. The villagers were worried, as their livelihoods depended on the bountiful harvests of the season. Desperate for a solution, they turned to Kavita, hoping that her wisdom and craftsmanship could help them find a way to bring life back to the parched earth.
-
-Kavita listened intently to the villagers' pleas and then set out on a journey to the forest that lay beyond the village. There, she sought the guidance of the ancient trees, their gnarled branches and roots a testament to their enduring strength and wisdom. The trees shared with Kavita the secrets of patience and perseverance, reminding her that the land was not2024-10-31:12:56:19,799 INFO     [generate.py:1162] 
+Once upon a time, there was a blind man who wanted to know the world. His name was Rajan and he was a visually impaired person from a small village in India. In a world where sight is often equated with knowledge and understanding, Rajan’s limitations seemed insurmountable. But he refused to be bound by his blindness. Rajan was determined to experience life on his own terms.
+One day, while exploring the village, Rajan stumbled upon a small music shop. The owner, a kind old man named Kumar, took a liking to Rajan and decided to take him under his wing. Kumar, a skilled musician himself, began teaching Rajan the art of music. At first, it was tough for Rajan to learn, but his dedication and passion soon made up for his lack of sight.
+Kumar taught Rajan how to play the sitar, an Indian stringed instrument. Rajan’s fingers moved deftly over the strings, creating beautiful melodies that filled the air. As he played, Rajan began to imagine the world around him. He pictured vibrant colors, heard the sweet songs of birds, and even felt the rhythm of the music coursing through his veins.
+Music became Rajan’s gateway to understanding the world. He learned to perceive it2024-10-31:17:16:49,072 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 1: 59.0050 sec total                 
-Time to first token: 0.7521 sec with parallel prefill.                
+Time for inference 1: 51.8427 sec total                 
+Time to first token: 0.7056 sec with parallel prefill.                
 
-      Total throughput: 4.3386 tokens/sec, 0.2305 s/token                 
-First token throughput: 1.3296 tokens/sec, 0.7521 s/token                 
- Next token throughput: 4.3775 tokens/sec, 0.2284 s/token                     
-2024-10-31:12:56:19,799 INFO     [generate.py:1173] 
-Bandwidth achieved: 37.13 GB/s
-2024-10-31:12:56:19,799 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
+      Total throughput: 4.9380 tokens/sec, 0.2025 s/token                 
+First token throughput: 1.4173 tokens/sec, 0.7056 s/token                 
+ Next token throughput: 4.9866 tokens/sec, 0.2005 s/token                     
+2024-10-31:17:16:49,072 INFO     [generate.py:1173] 
+Bandwidth achieved: 42.26 GB/s
+2024-10-31:17:16:49,072 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
 
 ========================================
 
-Once upon a time, I had the chance to make a visit to the local cemetery. I took a few moments to wander through the tombstones, reading the epitaphs and thinking about the stories of the people buried there. It struck me that many of the stones were weathered or worn, almost as if the person being honored had been forgotten over time.
-The realization hit me that perhaps the way we remember and honor our loved ones can sometimes become a kind of competition to see who can stay in the public consciousness the longest. We often think that the best way to keep someone's memory alive is to create a grand monument or to hold elaborate annual events in their name. Yet, in doing so, we can inadvertently create a culture in which only the most prominent or popular individuals are truly remembered.
-Think about it: when was the last time you thought about someone who might have struggled with mental illness, or someone who was an ordinary person with an extraordinary life, but who wasn't widely known? When did you last hear a story about someone who lived a simple but meaningful life, and who might not have been celebrated in a big way while they were alive?
-I think this is one of the things that drew me to the concept of "thin places" – those moments, spaces, or2024-10-31:12:57:26,400 INFO     [generate.py:1162] 
+Once upon a time, in a small village nestled in the rolling hills of the countryside, there lived a young girl named Sophie. She was a curious and adventurous child, with a heart full of wonder and a mind full of questions. Sophie loved to explore the world around her, and she spent most of her days playing outside, discovering new things, and learning about the world.
+One day, Sophie stumbled upon a mysterious and ancient-looking door hidden behind a thick veil of foliage. The door was old and worn, with intricate carvings and strange symbols etched into its surface. Sophie's curiosity was piqued, and she felt an overwhelming urge to open the door and see what lay beyond.
+As she reached out to touch the door, a low, rumbling voice whispered in her ear, "Welcome, Sophie. I have been waiting for you." Sophie spun around, but there was no one in sight. She turned back to the door, and as she did, it swung open with a creak, revealing a dimly lit hallway that stretched out into the darkness.
+Sophie's heart pounded with excitement and a touch of fear as she stepped through the doorway and into the unknown. She found herself in a narrow corridor, lined with cobweb-covered portraits and flickering candles that2024-10-31:17:17:44,846 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 2: 66.6186 sec total                 
-Time to first token: 0.7900 sec with parallel prefill.                
+Time for inference 2: 55.7742 sec total                 
+Time to first token: 0.6952 sec with parallel prefill.                
 
-      Total throughput: 3.8428 tokens/sec, 0.2602 s/token                 
-First token throughput: 1.2658 tokens/sec, 0.7900 s/token                 
- Next token throughput: 3.8737 tokens/sec, 0.2582 s/token                     
-2024-10-31:12:57:26,400 INFO     [generate.py:1173] 
-Bandwidth achieved: 32.89 GB/s
+      Total throughput: 4.5899 tokens/sec, 0.2179 s/token                 
+First token throughput: 1.4385 tokens/sec, 0.6952 s/token                 
+ Next token throughput: 4.6297 tokens/sec, 0.2160 s/token                     
+2024-10-31:17:17:44,846 INFO     [generate.py:1173] 
+Bandwidth achieved: 39.28 GB/s
 
 ========================================
 
-Once upon a time, there was a young girl named Lucia. Lucia was from a poor family, and her parents struggled to make ends meet. Despite theirilmiş difficulties, Lucia's parents encouraged her to pursue her dreams and aspirations. Lucia was a bright and ambitious girl, and she had always wanted to become a doctor.
-Every day, Lucia would walk to school through the streets of her neighborhood, dreaming of the day when she would be able to help people and make a difference in the world. She worked hard in school, studying late into the night and asking her parents for extra help when she needed it.
-As Lucia grew older, she began to realize that her dream of becoming a doctor was not just a fantasy, but a real possibility. She applied to medical school, and with the help of a scholarship, she was accepted into a prestigious program.
-Lucia's journey to becoming a doctor was not without its challenges. She had to work multiple part-time jobs to support herself while in school, and she faced many long and difficult waarhours in the hospital. But>';
-
-However, through it all, Lucia remained determined and focused on her goal. She knew that becoming a doctor was not just about achieving a prestigious title, but about using her skills and knowledge to make a positive impact on the world2024-10-31:12:58:27,981 INFO     [generate.py:1162] 
+Once upon a time, in a small village nestled in the rolling hills of the countryside, there lived a young girl named Sophia. Sophia was a curious and adventurous child, with a heart full of wonder and a mind full of questions. She loved to explore the world around her, and was always eager to learn new things.
+One day, Sophia heard a rumor about a hidden garden, deep in the nearby woods, that was said to be the most beautiful garden in all the land. The garden was rumored to be filled with the most vibrant and exotic flowers, trees, and plants that anyone had ever seen.
+Sophia was immediately captivated by the idea of this hidden garden, and she begged her parents to take her to see it. Her parents told her that they had heard the rumor too, but they were skeptical. They warned her that the woods could be dangerous, and that the garden might be just a myth.
+But Sophia was determined. She packed a small bag with some snacks and a bottle of water, and set off into the woods to find the hidden garden. She walked for what felt like hours, following a winding path that led her through(debug)//forest. As she walked, the trees grew taller and the underbrush thicker, and Sophia began to feel a little scared. She2024-10-31:17:18:35,983 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 3: 61.5807 sec total                 
-Time to first token: 0.9644 sec with parallel prefill.                
+Time for inference 3: 51.1379 sec total                 
+Time to first token: 0.7373 sec with parallel prefill.                
 
-      Total throughput: 4.1571 tokens/sec, 0.2405 s/token                 
-First token throughput: 1.0369 tokens/sec, 0.9644 s/token                 
- Next token throughput: 4.2068 tokens/sec, 0.2377 s/token                     
-2024-10-31:12:58:27,981 INFO     [generate.py:1173] 
-Bandwidth achieved: 35.58 GB/s
+      Total throughput: 5.0061 tokens/sec, 0.1998 s/token                 
+First token throughput: 1.3563 tokens/sec, 0.7373 s/token                 
+ Next token throughput: 5.0595 tokens/sec, 0.1976 s/token                     
+2024-10-31:17:18:35,983 INFO     [generate.py:1173] 
+Bandwidth achieved: 42.85 GB/s
 
 ========================================
 
 
-      Average tokens/sec (total): 4.11                 
-Average tokens/sec (first token): 1.21                 
-Average tokens/sec (next tokens): 4.15 
+      Average tokens/sec (total): 4.84                 
+Average tokens/sec (first token): 1.40                 
+Average tokens/sec (next tokens): 4.89 
                 

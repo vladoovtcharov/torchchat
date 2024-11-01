@@ -1,5 +1,5 @@
 
-RUN_MPS_EAGER=true
+RUN_MPS_EAGER=false
 
 RUN_CPU_EAGER=true
 RUN_CPU_COMPILE=true
@@ -90,7 +90,7 @@ if [ "$RUN_CPU_EAGER" = "true" ]; then
   echo "CPU Eager int4"
   generate_cmd="python3 torchchat.py generate $model --quantize '{\"linear:int4\": {\"groupsize\": 256}, \"precision\": {\"dtype\":\"float16\"}, \"executor\":{\"accelerator\":\"cpu\"}}' --prompt \"Once upon a time,\" --max-new-tokens 256 --num-samples 3"
   file="cpu_eager_4.txt"
-  formatted_export_and_generate "$file" "$generate_cmd"
+  # formatted_export_and_generate "$file" "$generate_cmd"
 fi
 
 
@@ -111,7 +111,7 @@ if [ "$RUN_CPU_COMPILE" = "true" ]; then
   echo "CPU compile int4"
   generate_cmd="python3 torchchat.py generate $model --quantize '{\"linear:int4\": {\"groupsize\": 256}, \"precision\": {\"dtype\":\"float16\"}, \"executor\":{\"accelerator\":\"cpu\"}}' --prompt \"Once upon a time,\" --max-new-tokens 256 --compile --num-samples 3"
   file="cpu_compile_4.txt"
-  formatted_export_and_generate "$file" "$generate_cmd"
+  # formatted_export_and_generate "$file" "$generate_cmd"
 fi
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -134,5 +134,5 @@ if [ "$RUN_CPU_AOTI" = "true" ]; then
   compile_cmd="python3 torchchat.py export $model --quantize '{\"linear:int4\": {\"groupsize\": 256}, \"precision\": {\"dtype\":\"float16\"}, \"executor\":{\"accelerator\":\"cpu\"}}' --output-dso-path /tmp/model34.so"
   generate_cmd="python3 torchchat.py generate $model --dso-path /tmp/model34.so --prompt \"Once upon a time,\" --max-new-tokens 256 --device cpu --num-samples 3"
   file="cpu_aoti_4.txt"
-  formatted_export_and_generate "$file" "$generate_cmd" "$compile_cmd" 
+  # formatted_export_and_generate "$file" "$generate_cmd" "$compile_cmd" 
 fi

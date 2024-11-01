@@ -2,11 +2,11 @@ python3 torchchat.py export llama3.1 --quantize '{"precision": {"dtype":"float16
 python3 torchchat.py generate llama3.1 --dso-path /tmp/model16.so --prompt "Once upon a time," --max-new-tokens 256 --device cpu --num-samples 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 python3 torchchat.py export llama3.1 --quantize '{"precision": {"dtype":"float16"}, "executor":{"accelerator":"cpu"}}' --output-dso-path /tmp/model16.so
-W1031 14:16:48.766000 34277 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
-W1031 14:16:51.362000 34277 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:225] +============================+
-W1031 14:16:51.362000 34277 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:226] |     !!!   WARNING   !!!    |
-W1031 14:16:51.362000 34277 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:227] +============================+
-W1031 14:16:51.362000 34277 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:228] torch._export.aot_compile() is being deprecated, please switch to directly calling torch._inductor.aoti_compile_and_package(torch.export.export()) instead.
+W1031 17:29:13.070000 65854 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1031 17:29:15.887000 65854 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:225] +============================+
+W1031 17:29:15.888000 65854 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:226] |     !!!   WARNING   !!!    |
+W1031 17:29:15.888000 65854 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:227] +============================+
+W1031 17:29:15.888000 65854 .venv/lib/python3.12/site-packages/torch/_export/__init__.py:228] torch._export.aot_compile() is being deprecated, please switch to directly calling torch._inductor.aoti_compile_and_package(torch.export.export()) instead.
 clang++: warning: -lc10: 'linker' input unused [-Wunused-command-line-argument]
 clang++: warning: -lomp: 'linker' input unused [-Wunused-command-line-argument]
 clang++: warning: argument unused during compilation: '-L/Library/Frameworks/Python.framework/Versions/3.12/lib' [-Wunused-command-line-argument]
@@ -16,7 +16,7 @@ clang++: warning: argument unused during compilation: '-L/Users/jackkhuu/Desktop
 Using device=cpu
 Setting max_seq_length to 300 for DSO export.
 Loading model...
-Time to load model: 2.36 seconds
+Time to load model: 2.56 seconds
 Quantizing the model with: {'precision': {'dtype': 'float16'}, 'executor': {'accelerator': 'cpu'}}
 Time to quantize model: 0.00 seconds
 -----------------------------------------------------------
@@ -24,78 +24,67 @@ Exporting model using AOT Inductor to /tmp/model16.so
 The generated DSO model can be found at: /tmp/model16.so
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 python3 torchchat.py generate llama3.1 --dso-path /tmp/model16.so --prompt "Once upon a time," --max-new-tokens 256 --device cpu --num-samples 3
-W1031 14:17:44.834000 34406 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1031 17:30:10.855000 66064 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
 Warning: checkpoint path ignored because an exported DSO or PTE path was specified
 Warning: checkpoint path ignored because an exported DSO or PTE path was specified
 Using device=cpu Apple M1 Max
 Loading model...
-Time to load model: 6.99 seconds
+Time to load model: 7.18 seconds
 -----------------------------------------------------------
-Once upon a time, there was a wise old turtle named Slowpoke. Slowpoke lived in a beautiful pond surrounded by tall trees and lush greenery. He spent his days swimming lazily in the pond and taking long naps in the warm sun.
-
-One day, a group of young frogs hopped onto the pond's edge, eager to explore their new surroundings. As they croaked and leaped about, Slowpoke observed them from a distance. He noticed that they were always in a hurry, rushing from one thing to another, never stopping to appreciate the beauty around them.
-
-Slowpoke decided to teach the young frogs a valuable lesson. He swam out to meet them, his shell glinting in the sunlight. "Hello, little frogs," he语sed in a gentle tone. "I see you're always in such a rush. Don't you ever stop to enjoy the world around you?"
-
-The frogs looked at each other, taken aback by Slowpoke's words. "Enjoy the world?" one of them questioned. "We have so much to do and see! We can't sit around all day."
-
-Slow هذاe sighed, his wise eyes twinkling with understanding. "Ah, but that's exactly what I'm trying to tell you. You may think you're2024-10-31:14:23:25,897 INFO     [generate.py:1162] 
+Once upon a time, in a world not so different from our own, there lived a little girl named Lily. She loved playing outside, exploring the woods behind her house, and climbing trees. But Lily was different from the other children in her village. She had a special gift – the ability to communicate with animals.
+One sunny afternoon, while out on a walk, Lily stumbled upon a small, injured rabbit. The rabbit had a broken wing and couldn't fly. Lily gently picked it up, cradling it in her arms, and took it back to her home. She nursed the rabbit back to health, feeding it berries and milk, and even built a special enclosure for it to live in.
+As the rabbit recovered, daily conversations between Lily and the rabbit became a common occurrence. They'd chat about everything from the latest village gossip to Lily's dreams and aspirations.
+The villagers, who had grown accustomed to Lily's special gift, were fascinated by her ability to speak with animals. However, some saw it as a peculiar ability, one that should be kept hidden. They whispered Zigzag tales of Lily walking off into the woods with her furry friends, talking to them as if they were old friends.
+But Lily didn't care about what others thought. She knew that her gift was2024-10-31:17:35:51,924 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 1: 184.0999 sec total                 
-Time to first token: 5.5410 sec with sequential prefill.                
+Time for inference 1: 183.9330 sec total                 
+Time to first token: 4.5753 sec with sequential prefill.                
 
-      Total throughput: 1.3905 tokens/sec, 0.7191 s/token                 
-First token throughput: 0.1805 tokens/sec, 5.5410 s/token                 
- Next token throughput: 1.4281 tokens/sec, 0.7002 s/token                     
-2024-10-31:14:23:25,897 INFO     [generate.py:1173] 
-Bandwidth achieved: 22.33 GB/s
-2024-10-31:14:23:25,897 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
+      Total throughput: 1.3918 tokens/sec, 0.7185 s/token                 
+First token throughput: 0.2186 tokens/sec, 4.5753 s/token                 
+ Next token throughput: 1.4217 tokens/sec, 0.7034 s/token                     
+2024-10-31:17:35:51,924 INFO     [generate.py:1173] 
+Bandwidth achieved: 22.35 GB/s
+2024-10-31:17:35:51,924 INFO     [generate.py:1177] *** This first iteration will include cold start effects for dynamic import, hardware caches. ***
 
 ========================================
 
-Once upon a time, in a small village nestled in the rolling hills of Tuscany, there lived a young girl named Sophia. Sophia was a curious and adventurous girl, with a heart full of wonder and a mind full of questions. She loved to explore the rolling hills and vineyards that surrounded her village, and she spent most of her days playing among_food&travel Guide
-These days, Sophia spends her days dreaming up new destinations and culinary experiences for Food&Travel Magazine. In fact, you can find her exploring the farthest reaches of the globe in search of the best wine, food, and culture that the world has to offer. She remains in touch with her village roots, of course, and always makes time for a good plate of ribollita. When she SVN Sofia, she can be found wandering the streets of Florence, sampling the local specialties and plotting her next adventure. Whether she's sipping a glass of Chianti in Tuscany or enjoying a plate of pad thai in Bangkok, you can be sure that Sophia is always on the lookout for the next great culinary experience. Food&travel Guide
-As she grew older, _Sophia's love for travel and trying new foods did not fade. Instead, she made them an integral part of her life,2024-10-31:14:26:24,821 INFO     [generate.py:1162] 
+Once upon a time, a young girl named Luna lived in a small village surrounded by a dense forest. She was a curious and adventurous child, always eager to explore the woods and discover its secrets. One day, while wandering deeper into the forest than she had ever gone Investments before, Luna stumbled upon a hidden clearing. In the center of the clearing stood an enormous tree, its trunk twisted and gnarled with age.
+As she approached the tree, Luna noticed that its branches seemed to be moving, as if they were alive. She reached out a hand to touch one of the branches, and to her surprise, it felt warm to the touch. Suddenly, a small door material Certifilings Limited appeared on the trunk of the tree, and a soft, melodious voice spoke to her.
+"Welcome, little one," said the voice. "I have been waiting for you. My name is Olwen, and I am the guardian of this forest. I have been watching you, and I sense that you have a special connection to the natural world. I will share a secret with you: this forest is not just a collection of trees and animals, but a living, breathing entity that holds the keys to the past, present, and future."
+Luna's eyes widened with wonder as2024-10-31:17:38:54,051 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 2: 178.9249 sec total                 
-Time to first token: 3.9808 sec with sequential prefill.                
+Time for inference 2: 182.1284 sec total                 
+Time to first token: 4.0604 sec with sequential prefill.                
 
-      Total throughput: 1.4308 tokens/sec, 0.6989 s/token                 
-First token throughput: 0.2512 tokens/sec, 3.9808 s/token                 
- Next token throughput: 1.4576 tokens/sec, 0.6861 s/token                     
-2024-10-31:14:26:24,821 INFO     [generate.py:1173] 
-Bandwidth achieved: 22.98 GB/s
+      Total throughput: 1.4056 tokens/sec, 0.7114 s/token                 
+First token throughput: 0.2463 tokens/sec, 4.0604 s/token                 
+ Next token throughput: 1.4320 tokens/sec, 0.6983 s/token                     
+2024-10-31:17:38:54,052 INFO     [generate.py:1173] 
+Bandwidth achieved: 22.57 GB/s
 
 ========================================
 
-Once upon a time, in a land far,图片 far away, there were two friends named Tim and Ben. They were best buddies and did everything together. One day, they stumbled upon a mysterious map that led them on an adventure to find the legendary Golden Cookie.
-
-The map was old and yellowed, with strange symbols and markings that neither of them could decipher. But they were determined to solve the mystery and find the treasure. They packed their bags, grabbed their backpacks, and set off on their journey.
-
-As they traveled through the countryside, they encountered all sorts of obstacles. They had to cross rivers, climb mountains, and navigate through 计数 dense forests. But they persevered, using their problem-solving skills and teamwork to overcome each challenge.
-
-Finally, after many days of traveling, they arrived at the foot of a massive mountain. According to the map, the Golden Cookie was hidden deep within the mountain's caves. They geared up, put on their climbing gear, and began their ascent.
-
-As they climbed higher, the air grew thinner and the temperature dropped. But they pressed on, their determination and friendship keeping them motivated. Finally, they reached the entrance to the caves and stepped inside.
-
-The caves were dark and musty, filled with the sound of dripping water and the smell2024-10-31:14:29:22,531 INFO     [generate.py:1162] 
+Once upon a time, in a small town nestled in the rolling hills of the countryside, there lived a young girl named Lily. Lily was different from the other children in the town. While they were content to spend their days playing in the sunlight and chasing after butterflies, Lily had a curious and adventurous spirit. She longed to explore the world beyond the boundaries of her town, to discover new things and to experience the thrill of the unknown.
+One day, Lily stumbled upon an old, mysterious-looking book in the attic of her family's home. The book was bound in a strange, scaly material that felt like rough bark beneath her fingers, and its pages were filled with strange symbols and illustrations that seemed to shimmer and glow in the dim light. The book was titled "The Secret_private Pages", and it told the story of a young girl who was also adventurous, just like Lily. The girl in the book, named _ Lena, had also longed to explore the world beyond her town, and she had discovered a magical portal that allowed her to travel to far-flung lands and meet incredible creatures.
+Lily was enchanted by the story of Lena, and she felt a deep connection to her. She sensed that she could be just like Lena, and that she too could discover the magic2024-10-31:17:42:03,466 INFO     [generate.py:1162] 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
 Generated 255 tokens                 
-Time for inference 3: 177.7109 sec total                 
-Time to first token: 4.3088 sec with sequential prefill.                
+Time for inference 3: 189.4148 sec total                 
+Time to first token: 4.0110 sec with sequential prefill.                
 
-      Total throughput: 1.4405 tokens/sec, 0.6942 s/token                 
-First token throughput: 0.2321 tokens/sec, 4.3088 s/token                 
- Next token throughput: 1.4706 tokens/sec, 0.6800 s/token                     
-2024-10-31:14:29:22,531 INFO     [generate.py:1173] 
-Bandwidth achieved: 23.14 GB/s
+      Total throughput: 1.3515 tokens/sec, 0.7399 s/token                 
+First token throughput: 0.2493 tokens/sec, 4.0110 s/token                 
+ Next token throughput: 1.3754 tokens/sec, 0.7271 s/token                     
+2024-10-31:17:42:03,466 INFO     [generate.py:1173] 
+Bandwidth achieved: 21.71 GB/s
 
 ========================================
 
 
-      Average tokens/sec (total): 1.42                 
-Average tokens/sec (first token): 0.22                 
-Average tokens/sec (next tokens): 1.45 
+      Average tokens/sec (total): 1.38                 
+Average tokens/sec (first token): 0.24                 
+Average tokens/sec (next tokens): 1.41 
                 
